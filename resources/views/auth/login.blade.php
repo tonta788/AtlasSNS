@@ -16,7 +16,7 @@
 </div>
 {{ Form::submit('LOGIN',['class' => 'submit'])}}
 
-<a class="btn" href="/register" role="button">新規ユーザーの方はこちら</a>
+<a class="btn" href="/register">新規ユーザーの方はこちら</a>
 
 {!! Form::close() !!}
 </div>

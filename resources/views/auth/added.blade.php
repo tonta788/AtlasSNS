@@ -8,7 +8,7 @@
   <p class="newuser">ユーザー登録が完了しました。<br>
   早速ログインをしてみましょう!</p>
 
- <a class="btn btn-danger" href="/login" role="button">ログイン画面へ</a>
+ <a class="btn btn-danger" href="/login">ログイン画面へ</a>
 </div>
 
 @endsection

@@ -29,7 +29,7 @@
 </div>
 {{ Form::submit('登録',['class' => 'submit']) }}
 
-<a class="btn" href="/login" role="button">ログイン画面へ戻る</a>
+<a class="btn" href="/login">ログイン画面へ戻る</a>
 
 {!! Form::close() !!}
 </div>

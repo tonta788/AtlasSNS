@@ -2,7 +2,7 @@
 
 @section('content')
 
-<img src="{{ asset('storage/images/' .auth()->user()->images) }}">
+
 
 <form action="{{ url('profileup') }}" enctype="multipart/form-data" method="post">
   @csrf
@@ -15,21 +15,34 @@
           </ul>
       </div>
    @endif
-   <dl class="UserProfile">
-    <dt>username</dt>
-    <dd><input type="text" name="username" value="{{ Auth::user()->username }}"></dd>
-    <dt>mail address</dt>
-    <dd><input type="text" name="mail" value="{{ Auth::user()->mail }}"></dd>
-    <dt>password</dt>
-    <dd><input type="password" name="newpassword"></dd>
-    <dt>password confirm</dt>
-    <dd><input type="password" name="newpassword_confirmation" ></dd>
-    <dt>bio</dt>
-    <dd><input type="text" name="bio" value="{{ Auth::user()->bio }}"></dd>
-    <dt>icon image</dt>
-    <dd><input type="file" name="iconimage"></dd>
-  </dl>
-  <input type="submit" name="profileupdate" value="更新">
+
+   <div class="Form">
+       <figure><img src="{{ asset('storage/images/' .auth()->user()->images) }}"></figure>
+  <div class="Form-Item">
+    <p class="Form-Item-Label">username</p>
+  <input type="text" name="username" class="Form-Item-Input" value="{{ Auth::user()->username }}"></div>
+
+    <div class="Form-Item">
+    <p class="Form-Item-Label">mail address</p>
+   <input type="text" name="mail" class="Form-Item-Input" value="{{ Auth::user()->mail }}"></div>
+
+    <div class="Form-Item">
+    <p class="Form-Item-Label">password</p>
+    <input type="password" name="newpassword" class="Form-Item-Input"></div>
+
+    <div class="Form-Item">
+    <p class="Form-Item-Label">password confirm</p>
+    <input type="password" name="newpassword_confirmation" class="Form-Item-Input"></div>
+
+    <div class="Form-Item">
+    <p class="Form-Item-Label">bio</p>
+    <input type="text" name="bio" value="{{ Auth::user()->bio }}" class="Form-Item-Input"></div>
+
+    <div class="Form-Item">
+        <p class="Form-Item-Label isMsg">icon image</p>
+    <dd><input type="file" name="iconimage" class="Form-Item-img"></div>
+  <input type="submit" name="profileupdate" value="更新" class="btn-update">
+</div>
 </form>
 
 @endsection

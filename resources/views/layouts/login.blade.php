@@ -25,21 +25,24 @@
     <header>
         <div id = "head">
         <h1><a href="/login"><img src="images/atlas.png"></a></h1>
-            <div id=>
+
+            <div id="nav">
                 <div id=>
 
                 <div class="menu">
-                     <input type="checkbox" id="menu_bar1" class="accordion" />
-    <label for="menu_bar1"><?php $user = Auth::user(); ?>{{ $user->username }}さん</label>
-    <img src="{{ asset('storage/images/' .auth()->user()->images) }}">
+                    <input type="checkbox" id="menu_bar1" class="accordion" />
+<label for="menu_bar1"><?php $user = Auth::user(); ?>{{ $user->username }}さん</label>
+<img src="{{ asset('storage/images/' .auth()->user()->images) }}">
                 <ul id="links1">
                     <li><a href="/top">HOME</a></li>
                     <li><a href="/profile">プロフィール編集</a></li>
                     <li><a href="/logout">ログアウト</a></li>
                 </ul>
             </div>
-
         </div>
+        </div>
+
+
     </header>
     <div id="row">
         <div id="container">

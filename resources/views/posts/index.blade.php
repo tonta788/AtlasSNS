@@ -3,13 +3,14 @@
 @section('content')
 <ul>
 <li class="main-block">
+  <div class="post-content">
 {!! Form::open(['url' => 'post/create']) !!}
 <img src="{{ asset('storage/images/' .auth()->user()->images) }}">
 {!! Form::input('text', 'newPost', null, ['required|min:1|max:150', 'class' => 'form-control form-control-lg', 'placeholder' => '投稿内容を入力してください。']) !!}
-
-<input type="image" src="images/post.png" width="120" height="120">
+<input type="image" src="images/post.png" class="Post-btn">
 
 {!! Form::close() !!}
+  </div>
 </li>
 @foreach ($list as $list)
 <div>
@@ -44,7 +45,7 @@
  {!! Form::input('text', 'upPost', $list->post, ['required', 'class' => 'form-control']) !!}
   </div>
       <div class="modal-footer">
-        <button type="submit" data-bs-dismiss="modal"><img src="{{ asset('images/edit.png') }}" alt="編集" width="25px" style="border-style:none;"></button>
+        <button type="submit" data-bs-dismiss="modal"><img src="{{ asset('images/edit.png') }}" alt="編集" width="40px"></button>
          </div>
       </div>
     </div>

@@ -3,13 +3,21 @@
 @section('content')
 
 <li class="main-block">
+  <div class="Form-search">
 {!! Form::open(['url' => '/searchs']) !!}
- <input type="text" size="25" name="name" placeholder="ユーザー名">
-  <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
+
+ <input type="text" name="name" placeholder="ユーザー名" class="Form-searcharea">
+
+  <button type="submit" class="btn-search"><i class="fas fa-search"></i></button>
+
   {!! Form::close() !!}
+  </div>
+<div class="keyword">
   @if(isset($keyword))
   <p>検索ワード：{{$keyword}}</p>
   @endif
+</div>
+
 </li>
 
 <table>
