@@ -24,7 +24,7 @@
 <body>
     <header>
         <div id = "head">
-        <h1><a href="/login"><img src="images/atlas.png"></a></h1>
+        <h1><a href="/login"><img src="{{ asset('images/atlas.png') }}" class="login"></a></h1>
 
             <div id="nav">
                 <div id=>
@@ -38,6 +38,7 @@
                     <li><a href="/profile">プロフィール編集</a></li>
                     <li><a href="/logout">ログアウト</a></li>
                 </ul>
+
             </div>
         </div>
         </div>
@@ -61,11 +62,12 @@
                 <p>{{ Auth::user()->followers()->get()->count() }}名</p>
                 </div>
                 <p class="btn"><a href="/follower-list">フォロワーリスト</a></p>
-            </div>
-             <p class="btn"><a href="/search">ユーザー検索</a></p>
-        <div id="bottom-bar">
-    </div>
 
+             <div id="bottom-bar">
+             <p class="btn"><a href="/search">ユーザー検索</a></p>
+            </div>
+        </div>
+        </div>
     <footer>
     </footer>
     <!-- <script src="./js/jquery-3.6.0.min.js"></script>

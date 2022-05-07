@@ -2,7 +2,7 @@
 
 @section('content')
 
-<li class="main-block">
+<div class="main-block">
   <div class="Form-search">
 {!! Form::open(['url' => '/searchs']) !!}
 
@@ -18,7 +18,7 @@
   @endif
 </div>
 
-</li>
+</div>
 
 <table>
 

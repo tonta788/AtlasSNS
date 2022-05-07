@@ -1,8 +1,8 @@
 @extends('layouts.login')
 
 @section('content')
-<ul>
-<li class="main-block">
+
+<div class="main-block">
   <div class="post-content">
 {!! Form::open(['url' => 'post/create']) !!}
 <img src="{{ asset('storage/images/' .auth()->user()->images) }}">
@@ -11,11 +11,11 @@
 
 {!! Form::close() !!}
   </div>
-</li>
+</div>
 @foreach ($list as $list)
-<div>
 
-    <li class="post-block">
+
+    <div class="post-block">
   <figure><img src="{{ asset('storage/images/' .$list->user->images) }}"></figure>
 
 <div class="post-content">
@@ -31,7 +31,8 @@
     <a href="/post/{{$list->id}}/delete" onclick="return confirm('こちらの投稿を削除してもよろしいでしょうか？')"><img src="images/trash-h.png" width="80" height="80"></a>
     </div>
 @endif
-    </li>
+</div>
+</div>
 
 <!-- Modal -->
  {{ Form::open(['url' => 'post/update'.$list->id,'method' => 'post']) }}

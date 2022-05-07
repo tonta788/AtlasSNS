@@ -2,30 +2,29 @@
 
 @section('content')
 
-<li class="main-block">
+<div class="main-block">
 <p>Follow List</p>
-<div class=follow-block>
+<div class="follow-block">
 @foreach($users as $users)
 <a href="/userprofile/{{$users->id}}"><img src="{{ asset('storage/images/' .$users->images) }}"></a>
 @endforeach
 </div>
-</li>
+</div>
 
 @foreach ($timelines as $timelines)
-<div>
 
-<li class="post-block">
+<div class="post-block">
 <figure><img src="{{ asset('storage/images/' .$timelines->user->images) }}"></figure>
 <div class="post-content">
 <div>
 <div class="post-name">{{ $timelines->user->username }}</div>
 <div>{{ $timelines->created_at }}</div>
 </div>
-<div>{{ $timelines->post }}
+<div>{{ $timelines->post }}</div>
+
+</div>
 </div>
 @endforeach
-</div>
-</li>
-</div>
+
 
 @endsection

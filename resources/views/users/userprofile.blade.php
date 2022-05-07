@@ -2,8 +2,7 @@
 
 @section('content')
 
-<ul>
-<li class="main-block">
+<div class="main-block">
 
 @if ($user->id !== Auth::user()->id)
     <figure><img src="{{ asset('storage/images/' .$user->images) }}"></figure>
@@ -30,14 +29,12 @@
       @endif
 
 </div>
-</li>
-
+</div>
+</div>
 
 @foreach($posts as $post)
 
-<div>
-
-<li class="post-block">
+<div class="post-block">
 <figure><img src="{{ asset('storage/images/' .$user->images) }}"></figure>
 <div class="post-content">
 <div>
@@ -46,13 +43,11 @@
 </div>
 
 <div>{{$post->post}}</div>
+</div>
+</div>
+
 
 @endforeach
-</div>
-</li>
-</div>
 
 
 @endsection
-</ul>
-</div>

@@ -6,8 +6,14 @@ body{
 } */
 /* header */
 header {
+  height: 100px;
   background-color: #186AC9;
 
+}
+
+.login {
+  height: 60px;
+  margin: 20px 20px;
 }
 
 #head {
@@ -17,24 +23,33 @@ header {
 
 #nav {
   margin: 0 0 0 auto;
+  flex: 0 0 20%;
 }
 
-.menu {
+/* .menu {
   width: 100%;
-}
+
+} */
+
 
 .menu a {
   display: block;
-  padding: 10px;
+  padding: 20px;
   text-decoration: none;
-  color: #000;
+  color: #727272;
+  text-align: center;
+
 }
 
 label {
   display: block;
-  margin: 0 0 30px 0;
-  padding: 30px 30px;
+  margin: 0 0 15px 0;
+  padding: 30px 0px;
   color: #fff;
+}
+
+#menuicon {
+  text-align: right;
 }
 
 label:after {
@@ -51,7 +66,6 @@ label:after {
 #menu_bar1:checked+label:after {
   transform: rotateX(180deg);
   position: absolute;
-  right: 3%;
 }
 
 .menu input {
@@ -64,18 +78,36 @@ label:after {
   background: white;
   list-style: none;
   font-size: 25px;
+  display: block;
+  position: relative;
 }
 
 .menu li {
   max-height: 0;
   overflow-y: hidden;
   transition: all 1s;
+
+}
+
+#links1 {
+  z-index: 10;
+  border: solid 2px #002a7e;
+
+}
+
+#links1 a:hover {
+  width: 100%;
+  background-color: #002a7e;
+  color: #fff
 }
 
 #menu_bar1:checked~#links1 li {
   max-height: 100px;
   opacity: 1;
+  background-color: #fff;
 }
+
+
 
 .form-control {
   border: none !important;
@@ -114,9 +146,21 @@ p a {
   flex: 0 0 80%;
 }
 
+#confirm {
+  margin: 0 0 0 auto;
+
+}
+
 #side-bar {
-  flex: 0 0 19%;
+  flex: 0 0 20%;
   border-left: 1px solid #727272;
+}
+
+#bottom-bar {
+  flex: 0 0 20%;
+  border-top: 1px solid #727272;
+  text-align: center;
+  padding: 20px;
 }
 
 /* modal */
@@ -125,20 +169,16 @@ p a {
   height: 500px;
 }
 
-
-
 /* post-content */
-li {
-  list-style: none;
-  border-bottom: 1px solid #000;
+.main-block {
   display: flex;
-
+  width: 100%;
+  border-bottom: thick solid #E6E6E6;
 }
 
-li.main-block {
-  width: 100%;
-  padding: 15px;
-  border-bottom: thick solid #E6E6E6;
+.post-block {
+  border-bottom: 1px solid #000;
+  display: flex;
 }
 
 .post-content {
@@ -155,17 +195,17 @@ li.main-block {
   margin-bottom: 10px;
 }
 
+.follow-block {
+  margin: 0 auto;
+}
+
 button {
   border: none;
   background: transparent;
 }
 
 /* search */
-li.main-block {
-  width: 100%;
-  padding: 15px;
-  border-bottom: thick solid #E6E6E6;
-}
+
 
 .Form-search {
   width: 80%;
@@ -202,10 +242,6 @@ table {
 
 td {
   padding: 20px 80px;
-}
-
-.follow-block {
-  margin: 0 auto;
 }
 
 .inform {
