@@ -25,10 +25,7 @@
     <header>
         <div id = "head">
         <h1><a href="/login"><img src="{{ asset('images/atlas.png') }}" class="login"></a></h1>
-
             <div id="nav">
-                <div id=>
-
                 <div class="menu">
                     <input type="checkbox" id="menu_bar1" class="accordion" />
 <label for="menu_bar1"><?php $user = Auth::user(); ?>{{ $user->username }}さん</label>

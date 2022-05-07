@@ -13,8 +13,6 @@
   </div>
 </div>
 @foreach ($list as $list)
-
-
     <div class="post-block">
   <figure><img src="{{ asset('storage/images/' .$list->user->images) }}"></figure>
 
