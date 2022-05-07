@@ -5,7 +5,9 @@
 <div class="main-block">
 
 @if ($user->id !== Auth::user()->id)
+
     <figure><img src="{{ asset('storage/images/' .$user->images) }}"></figure>
+
     <div class="post-content">
   <div>
     <div>name <p class="inform">{{$user->username}}</p></div>

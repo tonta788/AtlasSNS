@@ -38,10 +38,9 @@
                     <li><a href="/profile">プロフィール編集</a></li>
                     <li><a href="/logout">ログアウト</a></li>
                 </ul>
-
             </div>
         </div>
-        </div>
+    </div>
 
 
     </header>
@@ -53,13 +52,11 @@
             <div id="confirm">
                 <p><?php $user = Auth::user(); ?>{{ $user->username }}さんの</p>
                 <div>
-                <p>フォロー数</p>
-                <p>{{ Auth::user()->follows()->get()->count() }}名</p>
+                <p>フォロー数 {{ Auth::user()->follows()->get()->count() }}名</p>
                 </div>
                 <p class="btn"><a href="/follow-list">フォローリスト</a></p>
                 <div>
-                <p>フォロワー数</p>
-                <p>{{ Auth::user()->followers()->get()->count() }}名</p>
+                <p>フォロワー数 {{ Auth::user()->followers()->get()->count() }}名</p>
                 </div>
                 <p class="btn"><a href="/follower-list">フォロワーリスト</a></p>
 
