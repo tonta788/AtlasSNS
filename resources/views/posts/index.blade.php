@@ -24,9 +24,9 @@
     <div>{{ $list->post }}
 
 @if (Auth::user()->id == $list->user_id)
-     <div><button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal{{$list->id}}"><img src="images/edit.png" width="60" height="60"></button>
+     <div><button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal{{$list->id}}"><img src="images/edit.png"></button>
 
-    <a href="/post/{{$list->id}}/delete" onclick="return confirm('こちらの投稿を削除してもよろしいでしょうか？')"><img src="images/trash-h.png" width="80" height="80"></a>
+    <a href="/post/{{$list->id}}/delete" onclick="return confirm('こちらの投稿を削除してもよろしいでしょうか？')"><img src="images/trash.png"></a>
     </div>
 @endif
 </div>

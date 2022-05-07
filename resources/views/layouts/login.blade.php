@@ -24,7 +24,7 @@
 <body>
     <header>
         <div id = "head">
-        <h1><a href="/login"><img src="{{ asset('images/atlas.png') }}" class="login"></a></h1>
+        <h1><a href="/login"><img src="{{ asset('images/atlas.png') }}" id="login" ></a></h1>
             <div id="nav">
                 <div class="menu">
                     <input type="checkbox" id="menu_bar1" class="accordion" />
